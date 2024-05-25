@@ -36,16 +36,16 @@
             teamMemberDropDownBox = new ComboBox();
             selectTeamMemberLabel = new Label();
             addNewMemberBox = new GroupBox();
+            createMemberButton = new Button();
+            cellPhoneValue = new TextBox();
+            label2 = new Label();
+            emailValue = new TextBox();
+            emailLabel = new Label();
+            lastNameValue = new TextBox();
+            lastNameLabel = new Label();
             firstNameValue = new TextBox();
             firstNameLabel = new Label();
             label1 = new Label();
-            lastNameValue = new TextBox();
-            lastNameLabel = new Label();
-            emailValue = new TextBox();
-            emailLabel = new Label();
-            cellPhoneValue = new TextBox();
-            label2 = new Label();
-            createMemberButton = new Button();
             teamMemberListBox = new ListBox();
             deleteSelectedMember = new Button();
             createTeamButton = new Button();
@@ -56,7 +56,7 @@
             // 
             teamNameValue.Location = new Point(27, 112);
             teamNameValue.Name = "teamNameValue";
-            teamNameValue.Size = new Size(350, 43);
+            teamNameValue.Size = new Size(350, 36);
             teamNameValue.TabIndex = 15;
             // 
             // teamNameLabel
@@ -64,7 +64,7 @@
             teamNameLabel.AutoSize = true;
             teamNameLabel.Location = new Point(20, 71);
             teamNameLabel.Name = "teamNameLabel";
-            teamNameLabel.Size = new Size(164, 38);
+            teamNameLabel.Size = new Size(129, 30);
             teamNameLabel.TabIndex = 13;
             teamNameLabel.Text = "Team Name";
             // 
@@ -73,7 +73,7 @@
             teamOneScoreLabel.AutoSize = true;
             teamOneScoreLabel.Location = new Point(20, 71);
             teamOneScoreLabel.Name = "teamOneScoreLabel";
-            teamOneScoreLabel.Size = new Size(86, 38);
+            teamOneScoreLabel.Size = new Size(68, 30);
             teamOneScoreLabel.TabIndex = 14;
             teamOneScoreLabel.Text = "Score";
             // 
@@ -82,9 +82,10 @@
             headerLabel.AutoSize = true;
             headerLabel.Location = new Point(12, 9);
             headerLabel.Name = "headerLabel";
-            headerLabel.Size = new Size(170, 38);
+            headerLabel.Size = new Size(135, 30);
             headerLabel.TabIndex = 12;
             headerLabel.Text = "Create Team";
+            headerLabel.Click += this.headerLabel_Click;
             // 
             // addMemberButton
             // 
@@ -105,7 +106,7 @@
             teamMemberDropDownBox.FormattingEnabled = true;
             teamMemberDropDownBox.Location = new Point(27, 212);
             teamMemberDropDownBox.Name = "teamMemberDropDownBox";
-            teamMemberDropDownBox.Size = new Size(350, 45);
+            teamMemberDropDownBox.Size = new Size(350, 38);
             teamMemberDropDownBox.TabIndex = 21;
             // 
             // selectTeamMemberLabel
@@ -113,7 +114,7 @@
             selectTeamMemberLabel.AutoSize = true;
             selectTeamMemberLabel.Location = new Point(27, 171);
             selectTeamMemberLabel.Name = "selectTeamMemberLabel";
-            selectTeamMemberLabel.Size = new Size(277, 38);
+            selectTeamMemberLabel.Size = new Size(219, 30);
             selectTeamMemberLabel.TabIndex = 20;
             selectTeamMemberLabel.Text = "Select Team Member";
             // 
@@ -136,87 +137,6 @@
             addNewMemberBox.TabStop = false;
             addNewMemberBox.Text = "Add New Member";
             // 
-            // firstNameValue
-            // 
-            firstNameValue.Font = new Font("Segoe UI", 13.8F);
-            firstNameValue.Location = new Point(163, 39);
-            firstNameValue.Name = "firstNameValue";
-            firstNameValue.Size = new Size(181, 38);
-            firstNameValue.TabIndex = 11;
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Font = new Font("Segoe UI", 13.8F);
-            firstNameLabel.Location = new Point(6, 39);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new Size(124, 31);
-            firstNameLabel.TabIndex = 9;
-            firstNameLabel.Text = "First Name";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 38);
-            label1.TabIndex = 10;
-            label1.Text = "Score";
-            // 
-            // lastNameValue
-            // 
-            lastNameValue.Font = new Font("Segoe UI", 13.8F);
-            lastNameValue.Location = new Point(163, 88);
-            lastNameValue.Name = "lastNameValue";
-            lastNameValue.Size = new Size(181, 38);
-            lastNameValue.TabIndex = 13;
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new Font("Segoe UI", 13.8F);
-            lastNameLabel.Location = new Point(6, 88);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(122, 31);
-            lastNameLabel.TabIndex = 12;
-            lastNameLabel.Text = "Last Name";
-            // 
-            // emailValue
-            // 
-            emailValue.Font = new Font("Segoe UI", 13.8F);
-            emailValue.Location = new Point(163, 137);
-            emailValue.Name = "emailValue";
-            emailValue.Size = new Size(181, 38);
-            emailValue.TabIndex = 15;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Segoe UI", 13.8F);
-            emailLabel.Location = new Point(6, 137);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(70, 31);
-            emailLabel.TabIndex = 14;
-            emailLabel.Text = "Email";
-            // 
-            // cellPhoneValue
-            // 
-            cellPhoneValue.Font = new Font("Segoe UI", 13.8F);
-            cellPhoneValue.Location = new Point(163, 188);
-            cellPhoneValue.Name = "cellPhoneValue";
-            cellPhoneValue.Size = new Size(181, 38);
-            cellPhoneValue.TabIndex = 17;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F);
-            label2.Location = new Point(6, 188);
-            label2.Name = "label2";
-            label2.Size = new Size(116, 31);
-            label2.TabIndex = 16;
-            label2.Text = "CellPhone";
-            // 
             // createMemberButton
             // 
             createMemberButton.FlatAppearance.BorderColor = Color.Silver;
@@ -231,13 +151,94 @@
             createMemberButton.Text = "Create Member";
             createMemberButton.UseVisualStyleBackColor = true;
             // 
+            // cellPhoneValue
+            // 
+            cellPhoneValue.Font = new Font("Segoe UI", 13.8F);
+            cellPhoneValue.Location = new Point(163, 188);
+            cellPhoneValue.Name = "cellPhoneValue";
+            cellPhoneValue.Size = new Size(181, 32);
+            cellPhoneValue.TabIndex = 17;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13.8F);
+            label2.Location = new Point(6, 188);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 25);
+            label2.TabIndex = 16;
+            label2.Text = "CellPhone";
+            // 
+            // emailValue
+            // 
+            emailValue.Font = new Font("Segoe UI", 13.8F);
+            emailValue.Location = new Point(163, 137);
+            emailValue.Name = "emailValue";
+            emailValue.Size = new Size(181, 32);
+            emailValue.TabIndex = 15;
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Segoe UI", 13.8F);
+            emailLabel.Location = new Point(6, 137);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(58, 25);
+            emailLabel.TabIndex = 14;
+            emailLabel.Text = "Email";
+            // 
+            // lastNameValue
+            // 
+            lastNameValue.Font = new Font("Segoe UI", 13.8F);
+            lastNameValue.Location = new Point(163, 88);
+            lastNameValue.Name = "lastNameValue";
+            lastNameValue.Size = new Size(181, 32);
+            lastNameValue.TabIndex = 13;
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Font = new Font("Segoe UI", 13.8F);
+            lastNameLabel.Location = new Point(6, 88);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new Size(100, 25);
+            lastNameLabel.TabIndex = 12;
+            lastNameLabel.Text = "Last Name";
+            // 
+            // firstNameValue
+            // 
+            firstNameValue.Font = new Font("Segoe UI", 13.8F);
+            firstNameValue.Location = new Point(163, 39);
+            firstNameValue.Name = "firstNameValue";
+            firstNameValue.Size = new Size(181, 32);
+            firstNameValue.TabIndex = 11;
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Font = new Font("Segoe UI", 13.8F);
+            firstNameLabel.Location = new Point(6, 39);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new Size(102, 25);
+            firstNameLabel.TabIndex = 9;
+            firstNameLabel.Text = "First Name";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 30);
+            label1.TabIndex = 10;
+            label1.Text = "Score";
+            // 
             // teamMemberListBox
             // 
             teamMemberListBox.FormattingEnabled = true;
-            teamMemberListBox.ItemHeight = 37;
+            teamMemberListBox.ItemHeight = 30;
             teamMemberListBox.Location = new Point(422, 112);
             teamMemberListBox.Name = "teamMemberListBox";
-            teamMemberListBox.Size = new Size(317, 559);
+            teamMemberListBox.Size = new Size(317, 544);
             teamMemberListBox.TabIndex = 24;
             // 
             // deleteSelectedMember
@@ -268,7 +269,7 @@
             // 
             // CreateTeamForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1046, 753);
@@ -284,9 +285,10 @@
             Controls.Add(teamOneScoreLabel);
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "CreateTeamForm";
             Text = "CreateTeamForm";
+            Load += CreateTeamForm_Load;
             addNewMemberBox.ResumeLayout(false);
             addNewMemberBox.PerformLayout();
             ResumeLayout(false);
